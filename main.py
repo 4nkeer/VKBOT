@@ -148,7 +148,7 @@ group_name_promo_lime = 'promo_lime'
 
 # 28 https://vk.com/sweetfreecsgo
 group_sweetfreecsgo = group_id[28]
-group_name_sweetfreecsgo = 'promo_lime'
+group_name_sweetfreecsgo = 'sweetfreecsgo'
 
 namebot = vk.users.get(fields='screen_name')
 name = '✔ ' + namebot[0]['first_name'] + ' ' + namebot[0][
