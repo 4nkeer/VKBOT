@@ -1,6 +1,7 @@
 import vk_api
 import keep_alive
 import os
+from user import *
 import vk_api
 from groups import *
 from threading import Thread
@@ -8,9 +9,8 @@ import threading
 from vk_api.utils import get_random_id
 from vk_api.longpoll import VkLongPoll, VkEventType
 import requests, time, datetime
-# id владельца
-user = 255620921
-#ауе
+
+
 
 def message_vk():
   vk.messages.send(user_id=user, random_id=get_random_id(), message="Капча")
