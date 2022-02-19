@@ -975,34 +975,34 @@ def cs_typicai():
 
 
 # https://vk.com/csgo_up
-def csgo_up():
-    name = vk.groups.getById(group_id=group_name_csgo_up,
-                             fields='screen_name')
-    sumname = '--- ' + name[0]['name'] + ' ---'
-    print(sumname)
-    print('---------------------------------------------------')
-    posts = vk.wall.get(owner_id=group_csgo_up, count=count_post)
-    sumpost = len(posts['items'])
-    print(f'всего постов : {sumpost}')
-    job = 0
-    while job < count_post:
-        postItem = posts['items'][job]['id']
-        like = vk.likes.isLiked(type='post',
-                                item_id=postItem,
-                                owner_id=group_csgo_up)
-        if like['liked'] == 0:
-            vk.likes.add(type='post',
-                         item_id=postItem,
-                         owner_id=group_csgo_up)
-            print(
-                f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
-            )
-            sleep_like()
-        elif like['liked'] == 1:
-            print(
-                f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
-            )
-        job = job + 1
+# def csgo_up():
+#     name = vk.groups.getById(group_id=group_name_csgo_up,
+#                              fields='screen_name')
+#     sumname = '--- ' + name[0]['name'] + ' ---'
+#     print(sumname)
+#     print('---------------------------------------------------')
+#     posts = vk.wall.get(owner_id=group_csgo_up, count=count_post)
+#     sumpost = len(posts['items'])
+#     print(f'всего постов : {sumpost}')
+#     job = 0
+#     while job < count_post:
+#         postItem = posts['items'][job]['id']
+#         like = vk.likes.isLiked(type='post',
+#                                 item_id=postItem,
+#                                 owner_id=group_csgo_up)
+#         if like['liked'] == 0:
+#             vk.likes.add(type='post',
+#                          item_id=postItem,
+#                          owner_id=group_csgo_up)
+#             print(
+#                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
+#             )
+#             sleep_like()
+#         elif like['liked'] == 1:
+#             print(
+#                 f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
+#             )
+#         job = job + 1
 
 
 
@@ -1036,6 +1036,9 @@ def blank_labb():
             )
         job = job + 1
 while True:
+  
+    # csgo_up()
+    # print('--------------------------------------------------')
 
     ioan()
     print('---------------------------------------------------')
@@ -1128,9 +1131,6 @@ while True:
     print('--------------------------------------------------')
 
     cs_typicai()
-    print('--------------------------------------------------')
-
-    csgo_up()
     print('--------------------------------------------------')
 
     blank_labb()

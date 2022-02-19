@@ -161,8 +161,8 @@ group_cs_typicai = group_id[30][0]
 group_name_cs_typicai = group_id[30][1]
 
 # 31 https://vk.com/csgo_up
-group_csgo_up = group_id[31][0]
-group_name_csgo_up = group_id[31][1]
+# group_csgo_up = group_id[31][0]
+# group_name_csgo_up = group_id[31][1]
 
 # 32 https://vk.com/blank_labb
 group_blank_labb = group_id[32][0]
