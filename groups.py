@@ -31,7 +31,8 @@ group_id = [
     ["-207673269", "promo_lime"],
     ["-209631358", "sweetfreecsgo"],
     ["-184764153", "evreyxalava"],
-    ["-194306309", "cs_typicai"]
+    ["-194306309", "cs_typicai"],
+    ["-210534856","csgo_up"]
 ]
 
 # 0 = https://vk.com/ioanyt
@@ -157,3 +158,7 @@ group_name_evreyxalava = group_id[29][1]
 # 30 https://vk.com/cs_typicai
 group_cs_typicai = group_id[30][0]
 group_name_cs_typicai = group_id[30][1]
+
+# 31 https://vk.com/csgo_up
+group_csgo_up = group_id[30][0]
+group_name_csgo_up = group_id[30][1]
