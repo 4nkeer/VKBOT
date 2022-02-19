@@ -10,7 +10,7 @@ from vk_api.longpoll import VkLongPoll, VkEventType
 import requests, time, datetime
 # id владельца
 user = 255620921
-
+#ауе
 
 def message_vk():
   vk.messages.send(user_id=user, random_id=get_random_id(), message="Капча")
