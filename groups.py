@@ -34,7 +34,7 @@ group_id = [
     ["-194306309", "cs_typicai"]
 ]
 
-# 0 = https://vk.com/ioanyt
+# 0 = https://vk.com/ioanytt
 group_ioan = group_id[0][0]
 group_name_ioan = group_id[0][1]
 
