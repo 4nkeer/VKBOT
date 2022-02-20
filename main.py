@@ -1175,5 +1175,5 @@ while True:
     os.system('clear')
     today = datetime.datetime.today()
     print(today.strftime("%Y-%m-%d %H:%M:%S") + '| Не работаю 2 часа 🙂......')
-    vk.messages.send(user_id=user, message='Не работаю 2 часа... ', random_id=get_random_id())
+    vk.messages.send(user_id=user, message='Не работаю 2 часа🙂... ', random_id=get_random_id())
     cool_time()
