@@ -33,7 +33,8 @@ group_id = [
     ["-184764153", "evreyxalava"],
     ["-194306309", "cs_typicai"],
     ["-210534856","csgo_up"],
-    ["-209901575", "blank_labb"]
+    ["-209901575", "blank_labb"],
+    ["-207520824", "freefilka"]
 ]
 
 # 0 = https://vk.com/ioanyt
@@ -167,3 +168,7 @@ group_name_cs_typicai = group_id[30][1]
 # 32 https://vk.com/blank_labb
 group_blank_labb = group_id[32][0]
 group_name_blank_labb = group_id[32][1]
+
+# 33 https://vk.com/freefilka
+group_freefilka = group_id[33][0]
+group_name_freefilka = group_id[33][1]
