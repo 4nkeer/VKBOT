@@ -30,7 +30,13 @@ def main():
   display:flex;
   justify-content:center;
 ">
-<h2 style="color:white; font-family: 'Roboto', sans-serif;">Раб работает </h2>
+<h2 style="
+color:white; 
+font-family: 'Roboto', sans-serif;
+margin-bottom:5px;
+">
+Раб работает
+</h2>
 </div>
 
 <footer style="
