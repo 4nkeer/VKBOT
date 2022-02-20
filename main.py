@@ -40,7 +40,7 @@ def sleep_like():
   time.sleep(20)
 
 
-  # 0 = https://vk.com/ioanyt
+# 0 = https://vk.com/ioanyt
 def ioan():
     vk.account.setOnline()
     print('📲 В онлайне на 5 минут')
