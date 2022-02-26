@@ -10,6 +10,7 @@ Flask = "^2.0.2"
 vk-api = "^11.9.7"
 Django = "^4.0.2"
 style = "^1.1.6"
+schedule = "^1.1.0"
 
 [tool.poetry.dev-dependencies]
 

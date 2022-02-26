@@ -34,7 +34,8 @@ group_id = [
     ["-194306309", "cs_typicai"],
     ["-210534856","csgo_up"],
     ["-209901575", "blank_labb"],
-    ["-207520824", "freefilka"]
+    ["-207520824", "freefilka"],
+    ["-210723710", "metadon321"]
 ]
 
 # 0 = https://vk.com/ioanyt
@@ -172,3 +173,7 @@ group_name_blank_labb = group_id[32][1]
 # 33 https://vk.com/freefilka
 group_freefilka = group_id[33][0]
 group_name_freefilka = group_id[33][1]
+
+# 34 https://vk.com/metadon321
+group_metadon321 = group_id[34][0]
+group_name_metadon321 = group_id[34][1]

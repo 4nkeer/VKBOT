@@ -5,7 +5,6 @@ from user import *
 import vk_api
 from groups import *
 from threading import Thread
-import threading
 from vk_api.utils import get_random_id
 from vk_api.longpoll import VkLongPoll, VkEventType
 import requests, time, datetime
@@ -1068,8 +1067,40 @@ def freefilka():
             )
         job = job + 1
 
+
+      
+# https://vk.com/metadon321
+def metadon321():
+    name = vk.groups.getById(group_id=group_name_metadon321,
+                             fields='screen_name')
+    sumname = '--- ' + name[0]['name'] + ' ---'
+    print(sumname)
+    print('---------------------------------------------------')
+    posts = vk.wall.get(owner_id=group_metadon321, count=count_post)
+    sumpost = len(posts['items'])
+    print(f'всего постов : {sumpost}')
+    job = 0
+    while job < count_post:
+        postItem = posts['items'][job]['id']
+        like = vk.likes.isLiked(type='post',
+                                item_id=postItem,
+                                owner_id=group_metadon321)
+        if like['liked'] == 0:
+            vk.likes.add(type='post',
+                         item_id=postItem,
+                         owner_id=group_metadon321)
+            print(
+                f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
+            )
+            sleep_like()
+        elif like['liked'] == 1:
+            print(
+                f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
+            )
+        job = job + 1
+
+
 while True:
-  
     # csgo_up()
     # print('--------------------------------------------------')
 
@@ -1094,6 +1125,9 @@ while True:
     ggdrop()
     print('---------------------------------------------------')
 
+    metadon321()
+    print('---------------------------------------------------')
+  
     free_ekopgisecu()
     print('---------------------------------------------------')
 
@@ -1177,3 +1211,4 @@ while True:
     print(today.strftime("%Y-%m-%d %H:%M:%S") + '| Не работаю 2 часа 🙂......')
     vk.messages.send(user_id=user, message='Не работаю 2 часа🙂... ', random_id=get_random_id())
     cool_time()
+    
