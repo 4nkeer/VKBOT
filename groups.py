@@ -70,9 +70,9 @@ group_name_ggdrop = group_id[6][1]
 group_free_ekopgisecu = group_id[7][0]
 group_name_free_ekopgisecu = group_id[7][1]
 
-# # 8 = https://vk.com/csgoblink
-# group_csgoblink = group_id[8][0]
-# group_name_csgoblink = group_id[8][1]
+# 8 = https://vk.com/csgoblink
+group_csgoblink = group_id[8][0]
+group_name_csgoblink = group_id[8][1]
 
 # 9 = https://vk.com/halava_ananas
 group_halava_ananas = group_id[9][0]
