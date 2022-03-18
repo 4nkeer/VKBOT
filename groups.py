@@ -112,8 +112,8 @@ group_rubachannel = group_id[17][0]
 group_name_rubachannel = group_id[17][1]
 
 # 18 = https://vk.com/promo666code
-group_promo666code = group_id[18][0]
-group_name_promo666code = group_id[18][1]
+# group_promo666code = group_id[18][0]
+# group_name_promo666code = group_id[18][1]
 
 # 19 = https://vk.com/lezriland
 group_lezriland = group_id[19][0]
