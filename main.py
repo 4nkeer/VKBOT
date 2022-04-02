@@ -32,7 +32,7 @@ name = '✔ ' + namebot[0]['first_name'] + ' ' + namebot[0][
     'last_name'] + ' запустился'
 print(name)
 
-count_post = 10
+count_post = 9
 def cool_time():
   time.sleep(7200)
 def sleep_like():
