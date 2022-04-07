@@ -97,8 +97,8 @@ group_xaluavniykimi = group_id[13][0]
 group_name_xaluavniykimi = group_id[13][1]
 
 # 14 = https://vk.com/free_skinl
-group_free_skinl = group_id[14][0]
-group_name_free_skinl = group_id[14][1]
+# group_free_skinl = group_id[14][0]
+# group_name_free_skinl = group_id[14][1]
 
 # 15 = https://vk.com/csgoaffk
 group_csgoaffk = group_id[15][0]
