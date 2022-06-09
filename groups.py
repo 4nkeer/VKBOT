@@ -160,9 +160,9 @@ group_name_sweetfreecsgo = group_id[28][1]
 group_evreyxalava = group_id[29][0]
 group_name_evreyxalava = group_id[29][1]
 
-# 30 https://vk.com/cs_typicai
-group_cs_typicai = group_id[30][0]
-group_name_cs_typicai = group_id[30][1]
+# # 30 https://vk.com/cs_typicai
+# group_cs_typicai = group_id[30][0]
+# group_name_cs_typicai = group_id[30][1]
 
 # 31 https://vk.com/csgo_up
 # group_csgo_up = group_id[31][0]

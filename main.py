@@ -915,35 +915,35 @@ def evreyxalava():
 
 
 
-# https://vk.com/cs_typicai
-def cs_typicai():
-    name = vk.groups.getById(group_id=group_name_cs_typicai,
-                             fields='screen_name')
-    sumname = '--- ' + name[0]['name'] + ' ---'
-    print(sumname)
-    print('---------------------------------------------------')
-    posts = vk.wall.get(owner_id=group_cs_typicai, count=count_post)
-    sumpost = len(posts['items'])
-    print(f'всего постов : {sumpost}')
-    job = 0
-    while job < count_post:
-        postItem = posts['items'][job]['id']
-        like = vk.likes.isLiked(type='post',
-                                item_id=postItem,
-                                owner_id=group_cs_typicai)
-        if like['liked'] == 0:
-            vk.likes.add(type='post',
-                         item_id=postItem,
-                         owner_id=group_cs_typicai)
-            print(
-                f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
-            )
-            sleep_like()
-        elif like['liked'] == 1:
-            print(
-                f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
-            )
-        job = job + 1
+# # https://vk.com/cs_typicai
+# def cs_typicai():
+#     name = vk.groups.getById(group_id=group_name_cs_typicai,
+#                              fields='screen_name')
+#     sumname = '--- ' + name[0]['name'] + ' ---'
+#     print(sumname)
+#     print('---------------------------------------------------')
+#     posts = vk.wall.get(owner_id=group_cs_typicai, count=count_post)
+#     sumpost = len(posts['items'])
+#     print(f'всего постов : {sumpost}')
+#     job = 0
+#     while job < count_post:
+#         postItem = posts['items'][job]['id']
+#         like = vk.likes.isLiked(type='post',
+#                                 item_id=postItem,
+#                                 owner_id=group_cs_typicai)
+#         if like['liked'] == 0:
+#             vk.likes.add(type='post',
+#                          item_id=postItem,
+#                          owner_id=group_cs_typicai)
+#             print(
+#                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
+#             )
+#             sleep_like()
+#         elif like['liked'] == 1:
+#             print(
+#                 f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
+#             )
+#         job = job + 1
 
 
 # https://vk.com/csgo_up
@@ -1240,8 +1240,8 @@ while True:
     evreyxalava()
     print('--------------------------------------------------')
 
-    cs_typicai()
-    print('--------------------------------------------------')
+    # cs_typicai()
+    # print('--------------------------------------------------')
 
     # blank_labb()
     # print('--------------------------------------------------')
