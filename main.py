@@ -659,35 +659,35 @@ def qwerskins():
 
 
 
-# https://vk.com/promorunn
-def promorunn():
-    name = vk.groups.getById(group_id=group_name_promorunn,
-                             fields='screen_name')
-    sumname = '--- ' + name[0]['name'] + ' ---'
-    print(sumname)
-    print('---------------------------------------------------')
-    posts = vk.wall.get(owner_id=group_promorunn, count=count_post)
-    sumpost = len(posts['items'])
-    print(f'всего постов : {sumpost}')
-    job = 0
-    while job < count_post:
-        postItem = posts['items'][job]['id']
-        like = vk.likes.isLiked(type='post',
-                                item_id=postItem,
-                                owner_id=group_promorunn)
-        if like['liked'] == 0:
-            vk.likes.add(type='post',
-                         item_id=postItem,
-                         owner_id=group_promorunn)
-            print(
-                f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
-            )
-            sleep_like()
-        elif like['liked'] == 1:
-            print(
-                f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
-            )
-        job = job + 1
+# # https://vk.com/promorunn
+# def promorunn():
+#     name = vk.groups.getById(group_id=group_name_promorunn,
+#                              fields='screen_name')
+#     sumname = '--- ' + name[0]['name'] + ' ---'
+#     print(sumname)
+#     print('---------------------------------------------------')
+#     posts = vk.wall.get(owner_id=group_promorunn, count=count_post)
+#     sumpost = len(posts['items'])
+#     print(f'всего постов : {sumpost}')
+#     job = 0
+#     while job < count_post:
+#         postItem = posts['items'][job]['id']
+#         like = vk.likes.isLiked(type='post',
+#                                 item_id=postItem,
+#                                 owner_id=group_promorunn)
+#         if like['liked'] == 0:
+#             vk.likes.add(type='post',
+#                          item_id=postItem,
+#                          owner_id=group_promorunn)
+#             print(
+#                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
+#             )
+#             sleep_like()
+#         elif like['liked'] == 1:
+#             print(
+#                 f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
+#             )
+#         job = job + 1
 
 
 
@@ -1216,8 +1216,8 @@ while True:
     qwerskins()
     print('---------------------------------------------------')
 
-    promorunn()
-    print('---------------------------------------------------')
+    # promorunn()
+    # print('---------------------------------------------------')
 
     malyaft()
     print('---------------------------------------------------')

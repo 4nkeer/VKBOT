@@ -128,9 +128,9 @@ group_name_nezoxcsgo = group_id[20][1]
 group_qwerskins = group_id[21][0]
 group_name_qwerskins = group_id[21][1]
 
-# 22 = https://vk.com/promorunn
-group_promorunn = group_id[22][0]
-group_name_promorunn = group_id[22][1]
+# # 22 = https://vk.com/promorunn
+# group_promorunn = group_id[22][0]
+# group_name_promorunn = group_id[22][1]
 
 # 23 = https://vk.com/malyaft
 group_malyaft = group_id[23][0]
