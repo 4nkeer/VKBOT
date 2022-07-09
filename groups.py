@@ -176,9 +176,9 @@ group_name_evreyxalava = group_id[29][1]
 group_freefilka = group_id[33][0]
 group_name_freefilka = group_id[33][1]
 
-# 34 https://vk.com/csgometadon
-group_metadon321 = group_id[34][0]
-group_name_metadon321 = group_id[34][1]
+# # 34 https://vk.com/csgometadon
+# group_metadon321 = group_id[34][0]
+# group_name_metadon321 = group_id[34][1]
 
 # 35 https://vk.com/gamehuntnet
 group_gamehuntnet = group_id[35][0]
