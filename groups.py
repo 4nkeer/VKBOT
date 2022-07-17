@@ -68,9 +68,9 @@ group_name_zlaypchela = group_id[5][1]
 group_ggdrop = group_id[6][0]
 group_name_ggdrop = group_id[6][1]
 
-# 7 = https://vk.com/free.ekopgisecu
-group_free_ekopgisecu = group_id[7][0]
-group_name_free_ekopgisecu = group_id[7][1]
+# # 7 = https://vk.com/free.ekopgisecu
+# group_free_ekopgisecu = group_id[7][0]
+# group_name_free_ekopgisecu = group_id[7][1]
 
 # 8 = https://vk.com/csgoblink
 group_csgoblink = group_id[8][0]
