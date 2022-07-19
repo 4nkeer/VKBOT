@@ -156,9 +156,9 @@ group_name_promo_lime = group_id[27][1]
 group_sweetfreecsgo = group_id[28][0]
 group_name_sweetfreecsgo = group_id[28][1]
 
-# 29 https://vk.com/evreyxalava
-group_evreyxalava = group_id[29][0]
-group_name_evreyxalava = group_id[29][1]
+# # 29 https://vk.com/evreyxalava
+# group_evreyxalava = group_id[29][0]
+# group_name_evreyxalava = group_id[29][1]
 
 # # 30 https://vk.com/cs_typicai
 # group_cs_typicai = group_id[30][0]
