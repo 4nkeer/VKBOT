@@ -31,7 +31,7 @@ namebot = vk.users.get(fields='screen_name')
 name = '✔ ' + namebot[0]['first_name'] + ' ' + namebot[0][
     'last_name'] + ' запустился'
 print(name)
-
+counter_like = 0
 count_post = 9
 def cool_time():
   time.sleep(7200)
@@ -55,6 +55,8 @@ def ioan():
         postItem = posts['items'][job]['id']
         like = vk.likes.isLiked(type='post', item_id=postItem, owner_id=group_ioan)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post', item_id=postItem, owner_id=group_ioan)
             print(
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
@@ -85,6 +87,9 @@ def free_skins():
                                 item_id=postItem,
                                 owner_id=group_free_skins)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
+            print(counter_like)
             vk.likes.add(type='post', item_id=postItem, owner_id=group_free_skins)
             print(
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
@@ -114,6 +119,8 @@ def free_skins_csgo():
                                 item_id=postItem,
                                 owner_id=group_free_skins_csgo)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post',
                          item_id=postItem,
                          owner_id=group_free_skins_csgo)
@@ -182,6 +189,8 @@ def black_moon():
                                 item_id=postItem,
                                 owner_id=group_black_moon)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post', item_id=postItem, owner_id=group_black_moon)
             print(
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
@@ -211,6 +220,8 @@ def zlaypchela():
                                 item_id=postItem,
                                 owner_id=group_zlaypchela)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post', item_id=postItem, owner_id=group_zlaypchela)
             print(
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
@@ -239,6 +250,8 @@ def ggdrop():
                                 item_id=postItem,
                                 owner_id=group_ggdrop)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post', item_id=postItem, owner_id=group_ggdrop)
             print(
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
@@ -299,6 +312,8 @@ def csgoblink():
                                 item_id=postItem,
                                 owner_id=group_csgoblink)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post', item_id=postItem, owner_id=group_csgoblink)
             print(
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
@@ -328,6 +343,8 @@ def halava_ananas():
                                 item_id=postItem,
                                 owner_id=group_halava_ananas)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post',
                          item_id=postItem,
                          owner_id=group_halava_ananas)
@@ -359,6 +376,8 @@ def freealter():
                                 item_id=postItem,
                                 owner_id=group_freealter)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post', item_id=postItem, owner_id=group_freealter)
             print(
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
@@ -387,6 +406,8 @@ def fail_promokod():
                                 item_id=postItem,
                                 owner_id=group_fail_promokod)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post', item_id=postItem, owner_id=group_fail_promokod)
             print(
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
@@ -417,6 +438,8 @@ def xaluavniykimi():
                                 item_id=postItem,
                                 owner_id=group_xaluavniykimi)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post',
                          item_id=postItem,
                          owner_id=group_xaluavniykimi)
@@ -454,6 +477,8 @@ def csgoaffk():
                                 item_id=postItem,
                                 owner_id=group_csgoaffk)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post',
                          item_id=postItem,
                          owner_id=group_csgoaffk)
@@ -484,6 +509,8 @@ def ekopgisecu_csgo():
                                 item_id=postItem,
                                 owner_id=group_ekopgisecu_csgo)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post',
                          item_id=postItem,
                          owner_id=group_ekopgisecu_csgo)
@@ -516,6 +543,8 @@ def rubachannel():
                                 item_id=postItem,
                                 owner_id=group_rubachannel)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post',
                          item_id=postItem,
                          owner_id=group_rubachannel)
@@ -612,6 +641,8 @@ def nezoxcsgo():
                                 item_id=postItem,
                                 owner_id=group_nezoxcsgo)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post',
                          item_id=postItem,
                          owner_id=group_nezoxcsgo)
@@ -708,6 +739,8 @@ def malyaft():
                                 item_id=postItem,
                                 owner_id=group_malyaft)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post',
                          item_id=postItem,
                          owner_id=group_malyaft)
@@ -740,6 +773,8 @@ def gocs53():
                                 item_id=postItem,
                                 owner_id=group_gocs53)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post',
                          item_id=postItem,
                          owner_id=group_gocs53)
@@ -804,6 +839,8 @@ def freedim4ik():
                                 item_id=postItem,
                                 owner_id=group_freedim4ik)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post',
                          item_id=postItem,
                          owner_id=group_freedim4ik)
@@ -836,6 +873,8 @@ def promo_lime():
                                 item_id=postItem,
                                 owner_id=group_promo_lime)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post',
                          item_id=postItem,
                          owner_id=group_promo_lime)
@@ -868,6 +907,8 @@ def sweetfreecsgo():
                                 item_id=postItem,
                                 owner_id=group_sweetfreecsgo)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post',
                          item_id=postItem,
                          owner_id=group_sweetfreecsgo)
@@ -1027,6 +1068,8 @@ def freefilka():
                                 item_id=postItem,
                                 owner_id=group_freefilka)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post',
                          item_id=postItem,
                          owner_id=group_freefilka)
@@ -1091,6 +1134,8 @@ def gamehuntnet():
                                 item_id=postItem,
                                 owner_id=group_gamehuntnet)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post',
                          item_id=postItem,
                          owner_id=group_gamehuntnet)
@@ -1123,6 +1168,8 @@ def peniscsgo():
                                 item_id=postItem,
                                 owner_id=group_peniscgo)
         if like['liked'] == 0:
+            global counter_like
+            counter_like = counter_like + 1
             vk.likes.add(type='post',
                          item_id=postItem,
                          owner_id=group_peniscgo)
@@ -1249,6 +1296,6 @@ while True:
     os.system('clear')
     today = datetime.datetime.today()
     print(today.strftime("%Y-%m-%d %H:%M:%S") + '| Не работаю 2 часа 🙂......')
-    vk.messages.send(user_id=user, message='Не работаю 2 часа🙂... ', random_id=get_random_id())
+    vk.messages.send(user_id=user, message=f'Я лайкнул {counter_like} пост(ов)\nНе работаю 2 часа🙂... ', random_id=get_random_id())
     cool_time()
     
