@@ -62,7 +62,6 @@ def ioan():
                                 item_id=postItem,
                                 owner_id=group_ioan)
         if like['liked'] == 0:
-            global counter_like
             counter_like = counter_like + 1
             vk.likes.add(type='post', item_id=postItem, owner_id=group_ioan)
             print(
