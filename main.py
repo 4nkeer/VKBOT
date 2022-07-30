@@ -10,19 +10,20 @@ from vk_api.longpoll import VkLongPoll, VkEventType
 import requests, time, datetime
 
 
-
 def message_vk():
-  vk.messages.send(user_id=user, random_id=get_random_id(), message="Капча")
+    vk.messages.send(user_id=user, random_id=get_random_id(), message="Капча")
 
 
 def captcha_handler(captcha):
-  message_vk()
-  key = input("Капча {0}: ".format(captcha.get_url())).strip()
-  return captcha.try_again(key)
- 
+    message_vk()
+    key = input("Капча {0}: ".format(captcha.get_url())).strip()
+    return captcha.try_again(key)
+
+
 keep_alive.keep_alive()
 global vk_session, vk
-vk_session = vk_api.VkApi(token=os.environ['token'], captcha_handler=captcha_handler)
+vk_session = vk_api.VkApi(token=os.environ['token'],
+                          captcha_handler=captcha_handler)
 print('Авторизовался')
 longpoll = VkLongPoll(vk_session)
 vk = vk_session.get_api()
@@ -31,12 +32,15 @@ namebot = vk.users.get(fields='screen_name')
 name = '✔ ' + namebot[0]['first_name'] + ' ' + namebot[0][
     'last_name'] + ' запустился'
 print(name)
-counter_like = 0
 count_post = 9
+
+
 def cool_time():
-  time.sleep(7200)
+    time.sleep(7200)
+
+
 def sleep_like():
-  time.sleep(20)
+    time.sleep(20)
 
 
 # 0 = https://vk.com/ioanyt
@@ -51,9 +55,12 @@ def ioan():
     sumpost = len(posts['items'])
     print(f'всего постов : {sumpost}')
     job = 0
+    counter_like = 0
     while job < count_post:
         postItem = posts['items'][job]['id']
-        like = vk.likes.isLiked(type='post', item_id=postItem, owner_id=group_ioan)
+        like = vk.likes.isLiked(type='post',
+                                item_id=postItem,
+                                owner_id=group_ioan)
         if like['liked'] == 0:
             global counter_like
             counter_like = counter_like + 1
@@ -62,7 +69,7 @@ def ioan():
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
             )
             sleep_like()
-            
+
         elif like['liked'] == 1:
             print(
                 f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
@@ -90,7 +97,9 @@ def free_skins():
             global counter_like
             counter_like = counter_like + 1
             print(counter_like)
-            vk.likes.add(type='post', item_id=postItem, owner_id=group_free_skins)
+            vk.likes.add(type='post',
+                         item_id=postItem,
+                         owner_id=group_free_skins)
             print(
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
             )
@@ -191,7 +200,9 @@ def black_moon():
         if like['liked'] == 0:
             global counter_like
             counter_like = counter_like + 1
-            vk.likes.add(type='post', item_id=postItem, owner_id=group_black_moon)
+            vk.likes.add(type='post',
+                         item_id=postItem,
+                         owner_id=group_black_moon)
             print(
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
             )
@@ -222,7 +233,9 @@ def zlaypchela():
         if like['liked'] == 0:
             global counter_like
             counter_like = counter_like + 1
-            vk.likes.add(type='post', item_id=postItem, owner_id=group_zlaypchela)
+            vk.likes.add(type='post',
+                         item_id=postItem,
+                         owner_id=group_zlaypchela)
             print(
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
             )
@@ -314,7 +327,9 @@ def csgoblink():
         if like['liked'] == 0:
             global counter_like
             counter_like = counter_like + 1
-            vk.likes.add(type='post', item_id=postItem, owner_id=group_csgoblink)
+            vk.likes.add(type='post',
+                         item_id=postItem,
+                         owner_id=group_csgoblink)
             print(
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
             )
@@ -378,7 +393,9 @@ def freealter():
         if like['liked'] == 0:
             global counter_like
             counter_like = counter_like + 1
-            vk.likes.add(type='post', item_id=postItem, owner_id=group_freealter)
+            vk.likes.add(type='post',
+                         item_id=postItem,
+                         owner_id=group_freealter)
             print(
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
             )
@@ -388,6 +405,7 @@ def freealter():
                 f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
             )
         job = job + 1
+
 
 # https://vk.com/fail_promokod
 def fail_promokod():
@@ -408,7 +426,9 @@ def fail_promokod():
         if like['liked'] == 0:
             global counter_like
             counter_like = counter_like + 1
-            vk.likes.add(type='post', item_id=postItem, owner_id=group_fail_promokod)
+            vk.likes.add(type='post',
+                         item_id=postItem,
+                         owner_id=group_fail_promokod)
             print(
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
             )
@@ -418,7 +438,6 @@ def fail_promokod():
                 f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
             )
         job = job + 1
-
 
 
 # https://vk.com/xaluavniykimi
@@ -454,12 +473,6 @@ def xaluavniykimi():
         job = job + 1
 
 
-
-
-    
-
-
-
 # https://vk.com/csgoaffk
 def csgoaffk():
     name = vk.groups.getById(group_id=group_name_csgoaffk,
@@ -492,6 +505,7 @@ def csgoaffk():
             )
         job = job + 1
 
+
 # https://vk.com/ekopgisecu.csgo
 def ekopgisecu_csgo():
     name = vk.groups.getById(group_id=group_name_ekopgisecu_csgo,
@@ -523,7 +537,6 @@ def ekopgisecu_csgo():
                 f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
             )
         job = job + 1
-
 
 
 # https://vk.com/rubachannel
@@ -559,7 +572,6 @@ def rubachannel():
         job = job + 1
 
 
-
 # # https://vk.com/promo666code
 # def promo666code():
 #     name = vk.groups.getById(group_id=group_name_promo666code,
@@ -590,8 +602,6 @@ def rubachannel():
 #             )
 #         job = job + 1
 
-
-
 # # https://vk.com/lezriland
 # def lezriland():
 #     name = vk.groups.getById(group_id=group_name_lezriland,
@@ -621,7 +631,6 @@ def rubachannel():
 #                 f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
 #             )
 #         job = job + 1
-
 
 
 # https://vk.com/nezoxcsgo
@@ -657,7 +666,6 @@ def nezoxcsgo():
         job = job + 1
 
 
-
 # # https://vk.com/qwerskins
 # def qwerskins():
 #     name = vk.groups.getById(group_id=group_name_qwerskins,
@@ -687,8 +695,6 @@ def nezoxcsgo():
 #                 f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
 #             )
 #         job = job + 1
-
-
 
 # # https://vk.com/promorunn
 # def promorunn():
@@ -721,11 +727,9 @@ def nezoxcsgo():
 #         job = job + 1
 
 
-
 # https://vk.com/malyaft
 def malyaft():
-    name = vk.groups.getById(group_id=group_name_malyaft,
-                             fields='screen_name')
+    name = vk.groups.getById(group_id=group_name_malyaft, fields='screen_name')
     sumname = '--- ' + name[0]['name'] + ' ---'
     print(sumname)
     print('---------------------------------------------------')
@@ -741,9 +745,7 @@ def malyaft():
         if like['liked'] == 0:
             global counter_like
             counter_like = counter_like + 1
-            vk.likes.add(type='post',
-                         item_id=postItem,
-                         owner_id=group_malyaft)
+            vk.likes.add(type='post', item_id=postItem, owner_id=group_malyaft)
             print(
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
             )
@@ -755,11 +757,9 @@ def malyaft():
         job = job + 1
 
 
-
 # https://vk.com/gocs53
 def gocs53():
-    name = vk.groups.getById(group_id=group_name_gocs53,
-                             fields='screen_name')
+    name = vk.groups.getById(group_id=group_name_gocs53, fields='screen_name')
     sumname = '--- ' + name[0]['name'] + ' ---'
     print(sumname)
     print('---------------------------------------------------')
@@ -775,9 +775,7 @@ def gocs53():
         if like['liked'] == 0:
             global counter_like
             counter_like = counter_like + 1
-            vk.likes.add(type='post',
-                         item_id=postItem,
-                         owner_id=group_gocs53)
+            vk.likes.add(type='post', item_id=postItem, owner_id=group_gocs53)
             print(
                 f'✅  {job + 1} |    {namebot[0]["first_name"]}: Поставил лайк на публикацию! (Публикация №{postItem})'
             )
@@ -787,7 +785,6 @@ def gocs53():
                 f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
             )
         job = job + 1
-
 
 
 # # https://vk.com/xalyava.csgo1
@@ -819,7 +816,6 @@ def gocs53():
 #                 f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
 #             )
 #         job = job + 1
-
 
 
 # https://vk.com/freedim4ik
@@ -855,7 +851,6 @@ def freedim4ik():
         job = job + 1
 
 
-
 # https://vk.com/promo_lime
 def promo_lime():
     name = vk.groups.getById(group_id=group_name_promo_lime,
@@ -887,7 +882,6 @@ def promo_lime():
                 f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
             )
         job = job + 1
-
 
 
 # https://vk.com/sweetfreecsgo
@@ -923,7 +917,6 @@ def sweetfreecsgo():
         job = job + 1
 
 
-
 # # https://vk.com/evreyxalava
 # def evreyxalava():
 #     name = vk.groups.getById(group_id=group_name_evreyxalava,
@@ -953,8 +946,6 @@ def sweetfreecsgo():
 #                 f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
 #             )
 #         job = job + 1
-
-
 
 # # https://vk.com/cs_typicai
 # def cs_typicai():
@@ -986,7 +977,6 @@ def sweetfreecsgo():
 #             )
 #         job = job + 1
 
-
 # https://vk.com/csgo_up
 # def csgo_up():
 #     name = vk.groups.getById(group_id=group_name_csgo_up,
@@ -1017,8 +1007,6 @@ def sweetfreecsgo():
 #             )
 #         job = job + 1
 
-
-
 # # https://vk.com/blank_labb
 # def blank_labb():
 #     name = vk.groups.getById(group_id=group_name_blank_labb,
@@ -1048,7 +1036,6 @@ def sweetfreecsgo():
 #                 f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
 #             )
 #         job = job + 1
-
 
 
 # https://vk.com/freefilka
@@ -1084,7 +1071,6 @@ def freefilka():
         job = job + 1
 
 
-      
 # # https://vk.com/metadon321
 # def metadon321():
 #     name = vk.groups.getById(group_id=group_name_metadon321,
@@ -1114,7 +1100,6 @@ def freefilka():
 #                 f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
 #             )
 #         job = job + 1
-
 
 
 # https://vk.com/gamehuntnet
@@ -1150,7 +1135,6 @@ def gamehuntnet():
         job = job + 1
 
 
-      
 # https://vk.com/penis.csgo
 def peniscsgo():
     name = vk.groups.getById(group_id=group_name_peniscsgo,
@@ -1182,7 +1166,8 @@ def peniscsgo():
                 f'❗   {job + 1} |    {namebot[0]["first_name"]}: Уже ставил лайк на публикацию! (Публикация №{postItem})'
             )
         job = job + 1
-      
+
+
 while True:
     # csgo_up()
     # print('--------------------------------------------------')
@@ -1201,13 +1186,13 @@ while True:
 
     gamehuntnet()
     print('---------------------------------------------------')
-  
+
     black_moon()
     print('---------------------------------------------------')
 
     peniscsgo()
     print('---------------------------------------------------')
-  
+
     zlaypchela()
     print('---------------------------------------------------')
 
@@ -1216,7 +1201,7 @@ while True:
 
     # metadon321()
     # print('---------------------------------------------------')
-  
+
     # free_ekopgisecu()
     # print('---------------------------------------------------')
 
@@ -1231,7 +1216,7 @@ while True:
 
     fail_promokod()
     print('---------------------------------------------------')
-    
+
     # ggpromodrop()
     # print('---------------------------------------------------')
 
@@ -1240,7 +1225,6 @@ while True:
 
     freefilka()
     print('---------------------------------------------------')
-
 
     csgoaffk()
     print('---------------------------------------------------')
@@ -1280,7 +1264,7 @@ while True:
 
     promo_lime()
     print('--------------------------------------------------')
-    
+
     sweetfreecsgo()
     print('--------------------------------------------------')
 
@@ -1292,10 +1276,12 @@ while True:
 
     # blank_labb()
     # print('--------------------------------------------------')
-    
+
     os.system('clear')
     today = datetime.datetime.today()
     print(today.strftime("%Y-%m-%d %H:%M:%S") + '| Не работаю 2 часа 🙂......')
-    vk.messages.send(user_id=user, message=f'Я лайкнул {counter_like} пост(ов)\nНе работаю 2 часа🙂... ', random_id=get_random_id())
+    vk.messages.send(
+        user_id=user,
+        message=f'Я лайкнул {counter_like} пост(ов)\nНе работаю 2 часа🙂... ',
+        random_id=get_random_id())
     cool_time()
-    
