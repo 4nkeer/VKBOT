@@ -55,6 +55,7 @@ def ioan():
     sumpost = len(posts['items'])
     print(f'всего постов : {sumpost}')
     job = 0
+    global counter_like
     counter_like = 0
     while job < count_post:
         postItem = posts['items'][job]['id']
